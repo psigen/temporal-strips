@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:docs.temporal.io)",
+      "WebFetch(domain:grafana.com)",
+      "WebFetch(domain:learn.temporal.io)",
+      "WebFetch(domain:unified-planning.readthedocs.io)",
+      "WebFetch(domain:docs.tilt.dev)",
+      "WebFetch(domain:community.temporal.io)",
+      "Bash(uv sync:*)",
+      "Bash(tilt logs:*)",
+      "Bash(tilt trigger:*)"
+    ]
+  }
+}
