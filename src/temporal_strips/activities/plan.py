@@ -28,7 +28,7 @@ async def plan(input: PlanInput) -> PlanResult:
         activity.logger.info("Problem constructed: %s", problem.name)
 
         with OneshotPlanner(problem_kind=problem.kind) as planner:
-            result = planner.solve(problem)
+            result = planner.solve(problem) # type: ignore
 
         if result.status not in results.POSITIVE_OUTCOMES:
             return PlanResult(
