@@ -11,7 +11,7 @@ import asyncio
 
 from temporalio import activity
 
-from temporal_planner.models import PlanRequest, WorldState, encode_fluent
+from temporal_strips.models import PlanRequest, WorldState, encode_fluent
 
 
 # Scenario initial states keyed by a frozenset of object names for lookup.

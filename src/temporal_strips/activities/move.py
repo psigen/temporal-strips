@@ -6,8 +6,8 @@ import asyncio
 
 from temporalio import activity
 
-from temporal_planner.domain.state import apply_move
-from temporal_planner.models import ActionInput, ActionResult
+from temporal_strips.domain.state import apply_move
+from temporal_strips.models import ActionInput, ActionResult
 
 
 @activity.defn(name="move")

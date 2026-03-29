@@ -6,7 +6,7 @@ without importing unified-planning.
 
 from __future__ import annotations
 
-from temporal_planner.models import FluentValue, encode_fluent
+from temporal_strips.models import FluentValue, encode_fluent
 
 
 def check_goals(state: dict[str, FluentValue], goals: dict[str, FluentValue]) -> bool:

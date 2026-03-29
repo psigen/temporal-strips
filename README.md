@@ -1,4 +1,4 @@
-# temporal-planner
+# temporal-strips
 
 AI planning with [unified-planning](https://github.com/aiplan4eu/unified-planning) executed as [Temporal](https://temporal.io) workflows. A robot logistics domain demonstrates how an AI planner can drive workflow orchestration to achieve goal states.
 
@@ -41,7 +41,7 @@ docker compose up -d
 
 # Run a workflow
 uv sync
-uv run python -m temporal_planner.client --scenario delivery
+uv run python -m temporal_strips.client --scenario delivery
 ```
 
 ### With Tilt (recommended for development)
@@ -59,10 +59,10 @@ docker compose up -d temporal tempo grafana
 
 # Install deps and run worker locally
 uv sync
-uv run python -m temporal_planner.worker
+uv run python -m temporal_strips.worker
 
 # In another terminal, run a workflow
-uv run python -m temporal_planner.client --scenario delivery
+uv run python -m temporal_strips.client --scenario delivery
 ```
 
 ## Scenarios
@@ -96,7 +96,7 @@ The unified-planning library constructs the planning problem and the Tamer solve
 ├── Dockerfile                # Worker container image
 ├── Tiltfile                  # Tilt dev dashboard
 ├── docker/                   # Infrastructure config (Tempo, Grafana)
-├── src/temporal_planner/     # Python package (src layout)
+├── src/temporal_strips/     # Python package (src layout)
 │   ├── models.py             # Shared dataclasses (PlanRequest, Action, etc.)
 │   ├── domain/
 │   │   ├── definition.py     # Unified-planning problem construction

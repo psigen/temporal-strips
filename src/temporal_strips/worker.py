@@ -20,7 +20,7 @@ TASK_QUEUE = "planner-task-queue"
 
 def init_telemetry() -> None:
     """Configure OpenTelemetry with OTLP gRPC exporter."""
-    resource = Resource.create({SERVICE_NAME: "temporal-planner-worker"})
+    resource = Resource.create({SERVICE_NAME: "temporal-strips-worker"})
     provider = create_tracer_provider(resource=resource)
     exporter = OTLPSpanExporter(endpoint=OTEL_ENDPOINT, insecure=True)
     provider.add_span_processor(BatchSpanProcessor(exporter))
@@ -35,13 +35,13 @@ async def main() -> None:
         plugins=[OpenTelemetryPlugin(add_temporal_spans=True)],
     )
 
-    from temporal_planner.activities.drop import drop
-    from temporal_planner.activities.get_state import get_state
-    from temporal_planner.activities.move import move
-    from temporal_planner.activities.perceive import perceive
-    from temporal_planner.activities.pick_up import pick_up
-    from temporal_planner.activities.plan import plan
-    from temporal_planner.workflows.achieve import AchieveWorkflow
+    from temporal_strips.activities.drop import drop
+    from temporal_strips.activities.get_state import get_state
+    from temporal_strips.activities.move import move
+    from temporal_strips.activities.perceive import perceive
+    from temporal_strips.activities.pick_up import pick_up
+    from temporal_strips.activities.plan import plan
+    from temporal_strips.workflows.achieve import AchieveWorkflow
 
     worker = Worker(
         client,

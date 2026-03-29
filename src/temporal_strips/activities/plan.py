@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from temporalio import activity
 
-from temporal_planner.models import Action, PlanInput, PlanResult
+from temporal_strips.models import Action, PlanInput, PlanResult
 
 
 @activity.defn(name="plan")
@@ -22,7 +22,7 @@ async def plan(input: PlanInput) -> PlanResult:
         import unified_planning.engines.results as results
         from unified_planning.shortcuts import OneshotPlanner
 
-        from temporal_planner.domain.definition import build_problem
+        from temporal_strips.domain.definition import build_problem
 
         problem = build_problem(input.state, input.goals)
         activity.logger.info("Problem constructed: %s", problem.name)

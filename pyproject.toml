@@ -3,7 +3,7 @@ requires = ["uv_build>=0.11.2,<0.12"]
 build-backend = "uv_build"
 
 [project]
-name = "temporal-planner"
+name = "temporal-strips"
 version = "0.1.0"
 description = "AI planning with unified-planning executed as Temporal workflows"
 readme = "README.md"

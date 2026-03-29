@@ -16,4 +16,4 @@ RUN uv sync --frozen --no-dev --no-install-project && \
 COPY src/ src/
 RUN uv sync --frozen --no-dev
 
-CMD ["uv", "run", "python", "-m", "temporal_planner.worker"]
+CMD ["uv", "run", "python", "-m", "temporal_strips.worker"]

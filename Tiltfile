@@ -11,21 +11,21 @@ dc_resource('worker', labels=['app'])
 # --- Workflow trigger buttons ---
 
 cmd_button('run-delivery',
-    argv=['uv', 'run', 'python', '-m', 'temporal_planner.client', '--scenario', 'delivery'],
+    argv=['uv', 'run', 'python', '-m', 'temporal_strips.client', '--scenario', 'delivery'],
     resource='worker',
     icon_name='local_shipping',
     text='Run Delivery Scenario',
 )
 
 cmd_button('run-multi-package',
-    argv=['uv', 'run', 'python', '-m', 'temporal_planner.client', '--scenario', 'multi'],
+    argv=['uv', 'run', 'python', '-m', 'temporal_strips.client', '--scenario', 'multi'],
     resource='worker',
     icon_name='inventory_2',
     text='Run Multi-Package Scenario',
 )
 
 cmd_button('run-custom',
-    argv=['sh', '-c', 'uv run python -m temporal_planner.client --scenario $SCENARIO'],
+    argv=['sh', '-c', 'uv run python -m temporal_strips.client --scenario $SCENARIO'],
     resource='worker',
     icon_name='play_arrow',
     text='Run Custom Scenario',

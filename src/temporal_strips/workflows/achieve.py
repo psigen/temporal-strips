@@ -7,14 +7,14 @@ from datetime import timedelta
 from temporalio import workflow
 
 with workflow.unsafe.imports_passed_through():
-    from temporal_planner.activities.drop import drop
-    from temporal_planner.activities.get_state import get_state
-    from temporal_planner.activities.move import move
-    from temporal_planner.activities.perceive import perceive
-    from temporal_planner.activities.pick_up import pick_up
-    from temporal_planner.activities.plan import plan
-    from temporal_planner.domain.state import check_goals
-    from temporal_planner.models import (
+    from temporal_strips.activities.drop import drop
+    from temporal_strips.activities.get_state import get_state
+    from temporal_strips.activities.move import move
+    from temporal_strips.activities.perceive import perceive
+    from temporal_strips.activities.pick_up import pick_up
+    from temporal_strips.activities.plan import plan
+    from temporal_strips.domain.state import check_goals
+    from temporal_strips.models import (
         ActionInput,
         ActionResult,
         PlanInput,

@@ -10,7 +10,7 @@ import uuid
 from temporalio.client import Client
 from temporalio.contrib.opentelemetry import OpenTelemetryPlugin
 
-from temporal_planner.models import PlanRequest
+from temporal_strips.models import PlanRequest
 
 TEMPORAL_ADDRESS = os.environ.get("TEMPORAL_ADDRESS", "localhost:7233")
 TASK_QUEUE = "planner-task-queue"

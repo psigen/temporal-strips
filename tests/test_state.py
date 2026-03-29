@@ -2,7 +2,7 @@
 
 import pytest
 
-from temporal_planner.domain.state import (
+from temporal_strips.domain.state import (
     apply_drop,
     apply_move,
     apply_perceive,

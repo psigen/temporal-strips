@@ -12,7 +12,7 @@ from unified_planning.shortcuts import (
     UserType,
 )
 
-from temporal_planner.models import FluentValue, WorldState, decode_fluent
+from temporal_strips.models import FluentValue, WorldState, decode_fluent
 
 
 def build_problem(
@@ -224,7 +224,7 @@ def _set_closed_world_defaults(
             param_object_lists.append(type_to_objects.get(pt.name, []))
 
         for combo in product(*param_object_lists):
-            from temporal_planner.models import encode_fluent
+            from temporal_strips.models import encode_fluent
             key = encode_fluent(fluent_name, [str(o) for o in combo])
             if key not in state.fluents:
                 problem.set_initial_value(fluent(*combo), False)

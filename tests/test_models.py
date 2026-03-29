@@ -1,6 +1,6 @@
 """Tests for models.py: fluent encoding/decoding and dataclass construction."""
 
-from temporal_planner.models import (
+from temporal_strips.models import (
     Action,
     ActionInput,
     ActionResult,
