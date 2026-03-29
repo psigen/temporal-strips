@@ -442,6 +442,7 @@ dependencies = [
     { name = "opentelemetry-sdk" },
     { name = "temporalio", extra = ["opentelemetry"] },
     { name = "unified-planning" },
+    { name = "up-lpg", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
     { name = "up-pyperplan" },
 ]
 
@@ -459,6 +460,7 @@ requires-dist = [
     { name = "temporalio", specifier = ">=1.9.0" },
     { name = "temporalio", extras = ["opentelemetry"] },
     { name = "unified-planning", specifier = ">=1.3.0" },
+    { name = "up-lpg", marker = "sys_platform == 'linux' or sys_platform == 'win32'", specifier = ">=0.1.2" },
     { name = "up-pyperplan", specifier = ">=1.1.0" },
 ]
 
@@ -523,6 +525,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/ac/46/b47cea09306a213e98160f7b6c3fb85d08c954066e413ced6758482a4419/unified_planning-1.3.0.tar.gz", hash = "sha256:9f1914377172626e512bd4c1545aebddbfd4752bf37b36f9cd41ff059a7e6a52", size = 513819, upload-time = "2025-12-17T10:55:57.391Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b2/9d/e1fe9f8f478fcdf45ddecdb9587f6a6befe4d434159f51d2759afe4accbe/unified_planning-1.3.0-py3-none-any.whl", hash = "sha256:3ad9c790d238a12ce1dfd25f564e728d98350a0b4b79d3beb60978f95487fa46", size = 743538, upload-time = "2025-12-17T10:55:55.591Z" },
+]
+
+[[package]]
+name = "up-lpg"
+version = "0.1.3"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5f/0b/c576ec5e6095fd6347d4edbe635c528228400c61f61b7d68f568665ce673/up_lpg-0.1.3-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:325051666fa80c0326d028babec51476c17419d68f58c9258b0f7ca61fc0022d", size = 2751447, upload-time = "2026-02-03T16:27:53.033Z" },
+    { url = "https://files.pythonhosted.org/packages/6a/6e/40d1e0214bc90f1090129a20d62b45ce2259722f5f47bb4928aa94fa95c4/up_lpg-0.1.3-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:e0c8adae31ed45e1f2ca910c1a03e0e34b24105a9bfe6eb2456071ed0bbdfdaa", size = 2751428, upload-time = "2026-02-03T16:27:54.986Z" },
+    { url = "https://files.pythonhosted.org/packages/18/e8/d156e78fb032ec65eccc939cb2d94fba8c81a82ad7c20f49ba069add1239/up_lpg-0.1.3-cp312-cp312-win32.whl", hash = "sha256:1d6835aee5eaef7ce2780256f89a15a98ba8d68526134eed3e8340ef0095c088", size = 2377685, upload-time = "2026-02-03T16:27:56.879Z" },
+    { url = "https://files.pythonhosted.org/packages/cf/27/7dd753c03defff3b926ac3548411c6371885f3d374dc3ebd0a6d7da3d70f/up_lpg-0.1.3-cp312-cp312-win_amd64.whl", hash = "sha256:b3a45f994bf63943a79eeb616509c3ff5ed43bdc864f6430cf5519c24628aac4", size = 2377692, upload-time = "2026-02-03T16:27:58.241Z" },
+    { url = "https://files.pythonhosted.org/packages/7d/23/601039609b714c3f57ca6a06e5f5da21568657f2272178a22815fdd78255/up_lpg-0.1.3-cp313-cp313-win32.whl", hash = "sha256:5b958bb4f36cb475a38c24d872a91e0f5d0fc655297542077749316e1703d25c", size = 2377686, upload-time = "2026-02-03T16:27:59.316Z" },
+    { url = "https://files.pythonhosted.org/packages/90/93/6eddc3328fe770928190357266d06c7a240d45b3752a69daf2266e985ee9/up_lpg-0.1.3-cp313-cp313-win_amd64.whl", hash = "sha256:7dbcf8cdf017fc58c8d450e130d3a14cb562dc43eced455c3b5bb286c07c68e3", size = 2377691, upload-time = "2026-02-03T16:28:00.379Z" },
 ]
 
 [[package]]

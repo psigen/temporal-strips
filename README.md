@@ -28,7 +28,6 @@ The workflow queries current state, invokes the planner, executes only the first
 - [Docker](https://docs.docker.com/get-docker/) (for Temporal, Tempo, Grafana)
 - [uv](https://docs.astral.sh/uv/) (Python package manager)
 - Python 3.12+
-- Java runtime (for the Tamer solver -- optional, pyperplan works as a fallback)
 - [Tilt](https://tilt.dev/) (optional, for dev dashboard)
 
 ## Quick Start
@@ -81,7 +80,7 @@ The logistics domain models a warehouse robot that must:
 3. **pick_up** visible packages
 4. **drop** packages at target locations
 
-The unified-planning library constructs the planning problem and the Tamer solver finds a valid action sequence.
+The unified-planning library constructs the planning problem and the LPG solver finds a valid action sequence.
 
 ## Observability
 
@@ -127,7 +126,6 @@ The project installs multiple unified-planning solver backends:
 
 | Solver | Package | Requires | Temporal Planning |
 |--------|---------|----------|-------------------|
-| Tamer | `unified-planning[tamer]` | Java | Yes |
 | LPG | `up-lpg` | None (prebuilt binary) | Yes |
 | Pyperplan | bundled | None (pure Python) | No (classical only) |
 

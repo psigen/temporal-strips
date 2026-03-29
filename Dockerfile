@@ -9,8 +9,7 @@ WORKDIR /app
 COPY pyproject.toml uv.lock README.md ./
 
 # Install dependencies only (not the project itself) for better layer caching
-RUN uv sync --frozen --no-dev --no-install-project && \
-    uv pip install unified-planning[tamer] up-lpg
+RUN uv sync --frozen --no-dev --no-install-project
 
 # Copy application code then install the project
 COPY src/ src/

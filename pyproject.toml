@@ -16,6 +16,7 @@ dependencies = [
     "opentelemetry-sdk>=1.25.0",
     "opentelemetry-exporter-otlp-proto-grpc>=1.25.0",
     "up-pyperplan>=1.1.0",
+    "up-lpg>=0.1.2; sys_platform == 'linux' or sys_platform == 'win32'",
 ]
 
 [dependency-groups]
